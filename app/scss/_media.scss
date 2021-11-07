@@ -1,0 +1,54 @@
+@media screen and (max-width: 1440px) {
+    .goods {
+        grid-template-columns: repeat(12, 1fr);
+        &__card {
+            &:nth-child(even) {
+                grid-column: span 6;
+                justify-self: center;
+            }
+            &:nth-child(odd) {
+                grid-column: span 6;
+                justify-self: center;
+            }
+            &:last-child {
+                grid-column: span 12;
+            }
+        }
+        &__default {
+            grid-column: span 12;
+            justify-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .goods {
+        &__card {
+            grid-column: span 12 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+    .add {
+        position: static;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .add {
+        max-width: 310px;
+        margin-right: 0;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    .goods__card {
+        max-width: 290px;
+    }
+}
